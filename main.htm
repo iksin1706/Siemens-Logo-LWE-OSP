@@ -22,7 +22,7 @@
             <script src="js/html5.js"></script>
         <![endif]-->
     <style>
-       
+
     </style>
     <script type="text/javascript" src="/js/utility.js?rdm=169663545"></script>
     <script type="text/javascript" src="/js/storage.js?rdm=169663545"></script>
@@ -38,6 +38,9 @@
     <script type="text/javascript" src="js/echart.js?rdm=169663545"></script>
     <script type="text/javascript" src="js/render.js?rdm=169663545"></script>
 
+    <style>
+
+    </style>
 
 </HEAD>
 
@@ -47,49 +50,64 @@
             <img src="img/logo.png" alt="">
         </div>
         <div id="main" onclick="renderJs.hideMenu()" prefix="Siemens">
-            <div class="button">
-                <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                    class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
-                    off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
-                    tag_id="Private Tag" device_name="" on_image="img/F51DA93A.png" off_image="img/9F6A1EA0.png"
-                    bg_image="img/9F6A1EA0.png" mode="false" text_align="center">
-                    <p
-                        style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                    </p>
-                </div>
-                <div comp_type="PushButton" show_function="_callback_loadPushButton" 
-                    class="server_binding  button__button" range="131"
-                    address="3" type="1" length="1" frequency="1000" mouse_mode="Click"
-                    ontouchstart="renderJs.FuncTouchDown(this)" onmousedown="renderJs.FuncMouseDown(this)"
-                    onmouseout="renderJs.FuncMouseUp(this)" onmouseup="renderJs.FuncMouseUp(this)"
-                    ontouchend="renderJs.FuncTouchUp(this)" onclick="renderJs.onPushButtonClicked(this)"
-                    id="4f37a59bb3525bc9e83a" show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag"
-                    device_name="" on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
-                    mode="true" text_align="center">
-                    <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+            <div class="home-wrapper wrapper selected">
+                <div class="button">
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
+                        off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
+                        tag_id="Private Tag" device_name="" on_image="img/F51DA93A.png" off_image="img/9F6A1EA0.png"
+                        bg_image="img/9F6A1EA0.png" mode="false" text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                        </p>
+                    </div>
+                    <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                        class="server_binding  button__button" range="131" address="3" type="1" length="1"
+                        frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                        onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                        onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                        onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a"
+                        show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
+                        on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                        text_align="center">
+                        <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                    </div>
                 </div>
             </div>
+            <div class="gate-wrapper wrapper">BRAMY</div>
+            <div class="light-wrapper wrapper">SWIATLA</div>
+            <div class="time-wrapper wrapper">CZAS</div>
         </div>
         <div class="bottom-menu">
-            <div class="bottom-menu__item active">
-                <img src="img/home.png" alt="" class="bottom-menu__item__image">
+            <div class="bottom-menu__item active" option="home">
+                <div class="bottom-menu__item__image">
+                    <img src="img/home.png" alt="" >
+                </div>
                 <p class="bottom-menu__item__text">Home</p>
             </div>
-            <div class="bottom-menu__item">
-                <img src="img/light.png" alt="" class="bottom-menu__item__image">
+            <div class="bottom-menu__item" option="gate">
+                <div class="bottom-menu__item__image">
+                    <img src="img/gate.png" alt="" >
+                </div>
                 <p class="bottom-menu__item__text">Bramy</p>
             </div>
-            <div class="bottom-menu__item">
-                <img src="img/gate.png" alt="" class="bottom-menu__item__image">
+            <div class="bottom-menu__item" option="light">
+                <div class="bottom-menu__item__image">
+                    <img src="img/light.png" alt="" >
+                </div>
                 <p class="bottom-menu__item__text">Oświetlenie</p>
             </div>
-            <div class="bottom-menu__item">
-                <img src="img/time.png" alt="" class="bottom-menu__item__image">
+            <div class="bottom-menu__item" option="time">
+                <div class="bottom-menu__item__image">
+                    <img src="img/time.png" alt="" >
+                </div>
                 <p class="bottom-menu__item__text">Wł.czasowe</p>
             </div>
         </div>
     </DIV>
     <div id='timeout_dlg' style='display: none'>Please check the network connection!</div>
 </BODY>
+
+<script src="js/main.js"></script>
 
 </HTML>
