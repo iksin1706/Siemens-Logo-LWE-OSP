@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page height="900" width="1440">
+    <Components>
+        <Component class="com.siemens.logo.udwp.editor.component.PageComponent" id="main" name="Page">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="Page"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="main"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="0"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="1440@-@900"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="3000@-@3000"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="50@-@50"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="BasicProperty$PageBackgroundImage" id="PROPERTY_PAGE_BG_IMAGE" value="@-@@-@@-@null"/>
+        </Component>
+        <Component class="com.siemens.logo.udwp.editor.component.CustomizedComponent" id="41069f88ec424876c821" name="SwitchButton">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="SwitchButton"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="41069f88ec424876c821"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="1"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="100@-@100"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="1390@-@850"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="50@-@50"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="1450@-@910"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="LogoBindingProperty$TagName" id="PROPERTY_Tag_Name" value="Private Tag"/>
+            <ComponentProperty class="LogoBindingProperty$IOTThingNameProperty" id="PROPERTY_DeviceName" value="Local Device"/>
+            <ComponentProperty class="LogoBindingProperty$BlockType" id="PROPERTY_BlockType" value="Q"/>
+            <ComponentProperty class="LogoBindingProperty$BlockNumber" id="PROPERTY_BlockNumber" value="Q9"/>
+            <ComponentProperty class="LogoBindingProperty$VariableLength" id="PROPERTY_Length" value="1"/>
+            <ComponentProperty class="LogoBindingProperty$AccessMode" id="PROPERTY_AccessMode" value="Bit"/>
+            <ComponentProperty class="AnimationProperty$OnImage" id="PROPERTY_ON_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\My Graph\mainon.png@-@F51DA93A.png@-@Default.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OffImage" id="PROPERTY_OFF_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\My Graph\mainoff.png@-@9F6A1EA0.png@-@Default.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OnText" id="PROPERTY_ON_TEXT" value=""/>
+            <ComponentProperty class="AnimationProperty$OffText" id="PROPERTY_OFF_TEXT" value=""/>
+            <ComponentProperty class="LogoBindingProperty$Mode" id="PROPERTY_Mode" value="false"/>
+            <ComponentProperty class="TextStyleProperty$FontStyle" id="PROPERTY_Font" value="Arial@-@0@-@14"/>
+            <ComponentProperty class="TextStyleProperty$TextColor" id="PROPERTY_TextColor" value="0@-@0@-@0"/>
+            <ComponentProperty class="TextStyleProperty$TextAlgin" id="PROPERTY_TEXT_ALIGN" value="1"/>
+        </Component>
+        <Component class="com.siemens.logo.udwp.editor.component.PushButtonComponent" id="4f37a59bb3525bc9e83a" name="Push Button">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="Push Button"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="4f37a59bb3525bc9e83a"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="2"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="100@-@100"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="1390@-@850"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="50@-@50"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="1450@-@910"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="LogoBindingProperty$MouseMode" id="PROPERTY_MOUSE_MODE" value="0"/>
+            <ComponentProperty class="LogoBindingProperty$TagName" id="PROPERTY_Tag_Name" value="Private Tag"/>
+            <ComponentProperty class="LogoBindingProperty$IOTThingNameProperty" id="PROPERTY_DeviceName" value="Local Device"/>
+            <ComponentProperty class="LogoBindingProperty$BlockType" id="PROPERTY_BlockType" value="M"/>
+            <ComponentProperty class="LogoBindingProperty$BlockNumber" id="PROPERTY_BlockNumber" value="M4"/>
+            <ComponentProperty class="LogoBindingProperty$VariableLength" id="PROPERTY_Length" value="1"/>
+            <ComponentProperty class="LogoBindingProperty$AccessMode" id="PROPERTY_AccessMode" value="Bit"/>
+            <ComponentProperty class="AnimationProperty$OnImage" id="PROPERTY_ON_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\My Graph\blank.png@-@9A52DE0E.png@-@pb_go.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OffImage" id="PROPERTY_OFF_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\My Graph\blank.png@-@9A52DE0E.png@-@pb_stop.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OnText" id="PROPERTY_ON_TEXT" value="ON"/>
+            <ComponentProperty class="AnimationProperty$PushButtonOffText" id="PROPERTY_OFF_TEXT" value="OFF"/>
+            <ComponentProperty class="LogoBindingProperty$Mode" id="PROPERTY_Mode" value="true"/>
+            <ComponentProperty class="AnimationProperty$Frequency" id="PROPERTY_FREQUENCY" value="1000"/>
+            <ComponentProperty class="TextStyleProperty$FontStyle" id="PROPERTY_Font" value="Arial@-@0@-@14"/>
+            <ComponentProperty class="TextStyleProperty$TextColor" id="PROPERTY_TextColor" value="0@-@0@-@0"/>
+            <ComponentProperty class="TextStyleProperty$TextAlgin" id="PROPERTY_TEXT_ALIGN" value="1"/>
+        </Component>
+        <Component class="com.siemens.logo.udwp.editor.component.CustomizedComponent" id="402f882c46f723711fac" name="SwitchButton">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="SwitchButton"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="402f882c46f723711fac"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="3"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="121@-@259"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="100@-@100"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="1390@-@850"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="50@-@50"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="1450@-@910"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="LogoBindingProperty$TagName" id="PROPERTY_Tag_Name" value="Private Tag"/>
+            <ComponentProperty class="LogoBindingProperty$IOTThingNameProperty" id="PROPERTY_DeviceName" value="Local Device"/>
+            <ComponentProperty class="LogoBindingProperty$BlockType" id="PROPERTY_BlockType" value="M"/>
+            <ComponentProperty class="LogoBindingProperty$BlockNumber" id="PROPERTY_BlockNumber" value="M5"/>
+            <ComponentProperty class="LogoBindingProperty$VariableLength" id="PROPERTY_Length" value="1"/>
+            <ComponentProperty class="LogoBindingProperty$AccessMode" id="PROPERTY_AccessMode" value="Bit"/>
+            <ComponentProperty class="AnimationProperty$OnImage" id="PROPERTY_ON_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\Build-In Graph\Default\Default.png@-@Default.png@-@Default.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OffImage" id="PROPERTY_OFF_IMAGE" value="C:\Program Files\lwe\lwe\res\Graph Library\Build-In Graph\Default\Default.png@-@Default.png@-@Default.png@-@null"/>
+            <ComponentProperty class="AnimationProperty$OnText" id="PROPERTY_ON_TEXT" value="ON"/>
+            <ComponentProperty class="AnimationProperty$OffText" id="PROPERTY_OFF_TEXT" value="OFF"/>
+            <ComponentProperty class="LogoBindingProperty$Mode" id="PROPERTY_Mode" value="false"/>
+            <ComponentProperty class="TextStyleProperty$FontStyle" id="PROPERTY_Font" value="Arial@-@0@-@14"/>
+            <ComponentProperty class="TextStyleProperty$TextColor" id="PROPERTY_TextColor" value="0@-@0@-@0"/>
+            <ComponentProperty class="TextStyleProperty$TextAlgin" id="PROPERTY_TEXT_ALIGN" value="1"/>
+        </Component>
+    </Components>
+</Page>
