@@ -1,82 +1,95 @@
 <HTML xmlns="http://www.w3.org/1999/xhtml">
-    <HEAD>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <meta name="description" content="" />
-        <meta name="author" content="Matthias Edler-Golla, wachenfeld-golla.de" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta http-equiv="pragram" content="no-cache"/> 
-        <meta http-equiv="cache-control" content="no-cache, must-revalidate"/> 
-        <meta http-equiv="expires" content="0"/> 
+
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Matthias Edler-Golla, wachenfeld-golla.de" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
 
 
-        <style type="text/css">
-            body{
-                // background-image: url(img/default.jpg); 
-                background: gray; 
-                background-size: 100%;
 
-                -moz-user-select: none; /*ff*/
-                -webkit-user-select: none; /*webkit*/
-                -ms-user-select: none; /*IE10*/
-                -khtml-user-select: none; /*old*/
-                user-select: none;
-            }
-            #wrap{
-                position:relative;
-                margin: auto;
-            }
-            #main{
-                position:relative; 
-                //margin: auto;
-                padding:0;
-                top:0;
-                left:0;
-                background-color: white;
-                //border:1px solid red;
-            }
-            .textCenter{
-                //MARGIN-LEFT: auto;
-                vertical-align:middle;
-                text-align:center;
-                //word-wrap:break-word;
-                text-overflow: ellipsis; 
-                overflow: hidden; 
-                white-space: nowrap; 
-            }
-        </style>
-        <link href="js/jqueryui/jqueryui.css" rel="stylesheet" type="text/css"/>
-        <link href="css/nav.css" rel="stylesheet" type="text/css"/> 
-        <!-- this script helps older IE versions to understand html5 -->
-        <!--[if lt IE 9 ]>
+    <link href="js/jqueryui/jqueryui.css" rel="stylesheet" type="text/css" />
+    <link href="css/nav.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+    <!-- this script helps older IE versions to understand html5 -->
+    <!--[if lt IE 9 ]>
             <script src="js/html5.js"></script>
         <![endif]-->
-        <script type="text/javascript" src="/js/utility.js?rdm=169663545"></script> 
-        <script type="text/javascript" src="/js/storage.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/bigint.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/encrypt.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/ajax.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/login.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/pagecommon.js?rdm=169663545"></script>
-        <script type="text/javascript" src="/js/binding.js?rdm=169663545"></script>
-        <script type="text/javascript" src="js/jquery.js?rdm=169663545"></script>
-        <script type="text/javascript" src="js/jqueryui/jqueryui.js?rdm=169663545"></script>
-        <script type="text/javascript" src="js/map.js?rdm=169663545"></script>
-        <script type="text/javascript" src="js/echart.js?rdm=169663545"></script>
-        <script type="text/javascript" src="js/render.js?rdm=169663545"></script> 
-        
- 
-    </HEAD>
-    <BODY onload="loadPage()">  
-        <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 1000; background-color:gray;opacity: 0.98;" id="loadingDiv">
-            <p style="position: relative;text-align: center;color:white;top: 45%;" class="blink">LOADING...</p>
-        </div>
-        <DIV  id="wrap">
-            <div id="main" onclick="renderJs.hideMenu()" prefix="Siemens" style="width: 1420px; height: 880px;"><div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent" class="server_binding textCenter" style="position: absolute; left: 0px; top: 0px; width: 84px; height: 84px; background-size: 84px 85px; transform: rotate(0deg); background-image: url(&quot;file:///C:/Users/jasie/Desktop/Nowy%20folder%20(4)/Programy/STRAZ%20POZARNA/Webiste/lwe4/img/9F6A1EA0.png&quot;); cursor: auto; font-style: normal; font-family: Arial; font-size: 14px; color: rgb(0, 0, 0); z-index: 2; background-repeat: no-repeat no-repeat;" range="130" address="8" type="1" length="1" on_text="" off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0" tag_id="Private Tag" device_name="" on_image="img/F51DA93A.png" off_image="img/9F6A1EA0.png" bg_image="img/9F6A1EA0.png" mode="false" text_align="center"><p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;"></p></div><div comp_type="PushButton" show_function="_callback_loadPushButton" class="server_binding textCenter" style="line-height: 82px; cursor: pointer; position: absolute; left: 0px; top: 0px; width: 84px; height: 84px; background-size: 84px 85px; transform: rotate(0deg); background-image: url(&quot;file:///C:/Users/jasie/Desktop/Nowy%20folder%20(4)/Programy/STRAZ%20POZARNA/Webiste/lwe4/img/9A52DE0E.png&quot;); font-style: normal; font-family: Arial; font-size: 14px; color: rgb(0, 0, 0); z-index: 3; background-repeat: no-repeat no-repeat;" range="131" address="3" type="1" length="1" on_text="ON" off_text="OFF" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)" onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)" onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)" onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a" show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name="" on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true" text_align="center"><p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;">OFF</p></div><div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent" class="server_binding textCenter" style="position: absolute; left: 121px; top: 259px; width: 84px; height: 84px; background-size: 84px 85px; transform: rotate(0deg); background-image: url(&quot;file:///C:/Users/jasie/Desktop/Nowy%20folder%20(4)/Programy/STRAZ%20POZARNA/Webiste/lwe4/img/Default.png&quot;); cursor: auto; font-style: normal; font-family: Arial; font-size: 14px; color: rgb(0, 0, 0); z-index: 4; background-repeat: no-repeat no-repeat;" range="131" address="4" type="1" length="1" on_text="ON" off_text="OFF" id="402f882c46f723711fac" show_param="402f882c46f723711fac" degree="0" tag_id="Private Tag" device_name="" on_image="img/Default.png" off_image="img/Default.png" bg_image="img/Default.png" mode="false" text_align="center"><p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">OFF</p></div></div> 
-        </DIV>
-        <div id='timeout_dlg' style='display: none' >Please check the network connection!</div>
-    </BODY>
-</HTML>
+    <style>
+       
+    </style>
+    <script type="text/javascript" src="/js/utility.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/storage.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/bigint.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/encrypt.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/ajax.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/login.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/pagecommon.js?rdm=169663545"></script>
+    <script type="text/javascript" src="/js/binding.js?rdm=169663545"></script>
+    <script type="text/javascript" src="js/jquery.js?rdm=169663545"></script>
+    <script type="text/javascript" src="js/jqueryui/jqueryui.js?rdm=169663545"></script>
+    <script type="text/javascript" src="js/map.js?rdm=169663545"></script>
+    <script type="text/javascript" src="js/echart.js?rdm=169663545"></script>
+    <script type="text/javascript" src="js/render.js?rdm=169663545"></script>
 
+
+</HEAD>
+
+<BODY onload="loadPage()">
+    <DIV id="wrap">
+        <div class="top-logo">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div id="main" onclick="renderJs.hideMenu()" prefix="Siemens">
+            <div class="button">
+                <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                    class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
+                    off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
+                    tag_id="Private Tag" device_name="" on_image="img/F51DA93A.png" off_image="img/9F6A1EA0.png"
+                    bg_image="img/9F6A1EA0.png" mode="false" text_align="center">
+                    <p
+                        style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                    </p>
+                </div>
+                <div comp_type="PushButton" show_function="_callback_loadPushButton" 
+                    class="server_binding  button__button" range="131"
+                    address="3" type="1" length="1" frequency="1000" mouse_mode="Click"
+                    ontouchstart="renderJs.FuncTouchDown(this)" onmousedown="renderJs.FuncMouseDown(this)"
+                    onmouseout="renderJs.FuncMouseUp(this)" onmouseup="renderJs.FuncMouseUp(this)"
+                    ontouchend="renderJs.FuncTouchUp(this)" onclick="renderJs.onPushButtonClicked(this)"
+                    id="4f37a59bb3525bc9e83a" show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag"
+                    device_name="" on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                    mode="true" text_align="center">
+                    <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-menu">
+            <div class="bottom-menu__item active">
+                <img src="img/home.png" alt="" class="bottom-menu__item__image">
+                <p class="bottom-menu__item__text">Home</p>
+            </div>
+            <div class="bottom-menu__item">
+                <img src="img/light.png" alt="" class="bottom-menu__item__image">
+                <p class="bottom-menu__item__text">Bramy</p>
+            </div>
+            <div class="bottom-menu__item">
+                <img src="img/gate.png" alt="" class="bottom-menu__item__image">
+                <p class="bottom-menu__item__text">Oświetlenie</p>
+            </div>
+            <div class="bottom-menu__item">
+                <img src="img/time.png" alt="" class="bottom-menu__item__image">
+                <p class="bottom-menu__item__text">Wł.czasowe</p>
+            </div>
+        </div>
+    </DIV>
+    <div id='timeout_dlg' style='display: none'>Please check the network connection!</div>
+</BODY>
+
+</HTML>
