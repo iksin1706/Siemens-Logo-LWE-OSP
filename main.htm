@@ -39,19 +39,299 @@
     <script type="text/javascript" src="js/render.js?rdm=169663545"></script>
 
     <style>
+        * {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -moz-tap-highlight-color: transparent;
+            -ms-tap-highlight-color: transparent;
+        }
 
+        p {
+            margin: 5px;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        body {
+            background-color: #303030;
+            background-size: 100%;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            color: white;
+            font-family: "Trebuchet MS";
+        }
+
+        #wrap {
+            margin: auto;
+            min-height: 100vh;
+            width: 100vw !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        #main {
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 150px;
+            padding: 20px;
+            background-color: #303030;
+
+        }
+
+        .button {
+            width: 200px;
+            height: 200px;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .button__button {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .toggle {
+            height: 50px;
+            position: relative;
+        }
+
+        .button__image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background-image: url("img/9A52DE0E.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+        }
+
+        .box {
+            width: 100%;
+            padding: 10px;
+            border-radius: 10px;
+            height: 50px;
+            background-color: #101010;
+            box-shadow: 0px 5px 5px #101010;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .box--big {
+            height: 120px;
+        }
+
+        .alarm {
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+        }
+
+
+
+        .top-logo {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100px;
+            background: #DA2727;
+            border-radius: 0px 0px 20px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+        }
+
+        .top-logo img {
+            height: 80px;
+        }
+
+        .bottom-menu {
+            position: fixed;
+            left: 0;
+            background: #121212;
+            height: 80px;
+            width: 100vw;
+            bottom: 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .bottom-menu__item {
+            width: 60px;
+            height: 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .bottom-menu__item__image {
+            width: 30px;
+            transition: .3s ease-in-out;
+            border: 0px solid #303030;
+            border-radius: 50%;
+        }
+
+        .bottom-menu__item__image>img {
+            width: 30px;
+            height: 30px;
+        }
+
+        .bottom-menu__item__text {
+            font-size: 13px;
+        }
+
+        .active>.bottom-menu__item__image {
+            border-radius: 50%;
+            margin-top: -100px;
+            background-color: #DA2727;
+            border: 10px solid #303030;
+            padding: 25px;
+
+        }
+
+        .active>.bottom-menu__item__text {
+            margin-top: 40px;
+            color: #DA2727;
+        }
+
+        .wrapper {
+            display: none;
+
+        }
+
+        .selected {
+            display: flex !important;
+            flex-wrap: wrap;
+            gap: 10px;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .lamp__text {
+            color: #DA2727;
+        }
+
+        .box__text {
+            width: 100px;
+            margin-left: 65px;
+            font-size: 20px;
+        }
+
+        .switch {
+            background-size: contain;
+            height: 50px;
+            background-position: center;
+            width: 150px;
+            background-repeat: no-repeat;
+        }
+
+        .background--light {
+            background: url("img/light2.png") #101010;
+        }
+
+        .background--lightOUT {
+            background: url("img/lightOUT.png") #101010;
+        }
+
+        .background--icon {
+            background-position: -30px 50%;
+            background-size: 100px 100px;
+            background-repeat: no-repeat;
+        }
+
+        .w-50 {
+            height: 120px;
+            display: flex;
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            flex: 1;
+        }
+
+        .siren__text {
+            font-size: 18px;
+        }
     </style>
 
 </HEAD>
 
 <BODY onload="loadPage()">
-    <DIV id="wrap">
+    <DIV id="wrap" style="width: 100vw !important;">
         <div class="top-logo">
             <img src="img/logo.png" alt="">
         </div>
         <div id="main" onclick="renderJs.hideMenu()" prefix="Siemens">
             <div class="home-wrapper wrapper selected">
-                <div class="button">
+
+                <div class="box w-50">
+                    <p class="siren__text">Alarm Syrena</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter alarm" range="129" address="0" type="1" length="1" on_text=""
+                        off_text="" id="4b1b94c4e737c7c557cd" show_param="4b1b94c4e737c7c557cd" degree="0"
+                        tag_id="Private Tag" device_name="" on_image="img/alarmON.png" off_image="img/alarmOFF.png"
+                        bg_image="img/alarmOFF.png" mode="false" text_align="center">
+                    </div>
+                </div>
+
+                <div class="box w-50">
+                    <p class="siren__text">Alarm E-Remiza</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter alarm" range="129" address="1" type="1" length="1" on_text=""
+                        off_text="" id="456589157e4ff9a0b32d" show_param="456589157e4ff9a0b32d" degree="0"
+                        tag_id="Private Tag" device_name="" on_image="img/alarmON.png" off_image="img/alarmOFF.png"
+                        bg_image="img/alarmOFF.png" mode="false" text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <p>Ładowanie akumulatorów</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter" range="131" address="4" type="1" length="1" on_text="ON"
+                        off_text="OFF" id="457baff52e9f7b587b48" show_param="457baff52e9f7b587b48" degree="0"
+                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                        <p class="lamp__text">
+                            OFF
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <p>Dobijanie kompresora</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter" range="131" address="5" type="1" length="1" on_text="ON"
+                        off_text="OFF" id="4057a171fcfe7df7654f" show_param="4057a171fcfe7df7654f" degree="0"
+                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                        <p class="lamp__text">
+                            OFF
+                        </p>
+                    </div>
+                </div>
+                <!-- <div class="button">
                     <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
                         class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
                         off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
@@ -72,34 +352,115 @@
                         text_align="center">
                         <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
                     </div>
+                </div> -->
+            </div>
+            <div class="gate-wrapper wrapper">
+                <div class="box box--big background--icon background--light">
+                    <p class="box__text">Brama wewnetrzna</p>
+                    <div class="toggle">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding textCenter switch"
+                            range="130" address="6" type="1" length="1"
+                            id="452eb9c16552b94e487b" show_param="452eb9c16552b94e487b" degree="0" tag_id="Private Tag"
+                            device_name="" on_image="img/ON.png" off_image="img/OFF.png"
+                            bg_image="img/Default.png" mode="false" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;"></p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding textCenter button__button switch"
+                            range="131" address="0" type="1" length="1" on_text="ON" off_text="OFF" frequency="1000"
+                            mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4996a1d7ea9cf157c714"
+                            show_param="4996a1d7ea9cf157c714" degree="0" tag_id="Private Tag" device_name=""
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                            text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;">OFF</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-            <div class="gate-wrapper wrapper">BRAMY</div>
-            <div class="light-wrapper wrapper">SWIATLA</div>
+            <div class="light-wrapper wrapper">
+                <div class="box box--big background--icon background--light">
+
+                    <p class="box__text">Oswietlenie wewnetrzne</p>
+
+                    <div class="toggle">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding textCenter switch" range="130" address="8" type="1" length="1"
+                            id="4409bccca5355d32111e" show_param="4409bccca5355d32111e" degree="0" tag_id="Private Tag"
+                            device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png"
+                            mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding  button__button switch" range="131" address="3" type="1" length="1"
+                            frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a"
+                            show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="box box--big background--icon background--light">
+                    <p class="box__text">Oswietlenie zewnetrzne</p>
+                    <div class="toggle">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding textCenter switch" range="130" address="5" type="1" length="1"
+                            id="4b748f0ca91af70b433c" show_param="4b748f0ca91af70b433c" degree="0" tag_id="Private Tag"
+                            device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png"
+                            mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding textCenter button__button switch" range="131" address="2" type="1"
+                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4504b95c05a23fdd0c91"
+                            show_param="4504b95c05a23fdd0c91" degree="0" tag_id="Private Tag" device_name=""
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="time-wrapper wrapper">CZAS</div>
         </div>
         <div class="bottom-menu">
             <div class="bottom-menu__item active" option="home">
                 <div class="bottom-menu__item__image">
-                    <img src="img/home.png" alt="" >
+                    <img src="img/home.png" alt="">
                 </div>
                 <p class="bottom-menu__item__text">Home</p>
             </div>
-            <div class="bottom-menu__item" option="gate">
-                <div class="bottom-menu__item__image">
-                    <img src="img/gate.png" alt="" >
-                </div>
-                <p class="bottom-menu__item__text">Bramy</p>
-            </div>
             <div class="bottom-menu__item" option="light">
                 <div class="bottom-menu__item__image">
-                    <img src="img/light.png" alt="" >
+                    <img src="img/light.png" alt="">
                 </div>
                 <p class="bottom-menu__item__text">Oświetlenie</p>
             </div>
+            <div class="bottom-menu__item" option="gate">
+                <div class="bottom-menu__item__image">
+                    <img src="img/gate.png" alt="">
+                </div>
+                <p class="bottom-menu__item__text">Bramy</p>
+            </div>
+
             <div class="bottom-menu__item" option="time">
                 <div class="bottom-menu__item__image">
-                    <img src="img/time.png" alt="" >
+                    <img src="img/time.png" alt="">
                 </div>
                 <p class="bottom-menu__item__text">Wł.czasowe</p>
             </div>
