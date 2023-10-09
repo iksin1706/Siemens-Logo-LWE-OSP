@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Page height="900" width="1440">
+    <Components>
+        <Component class="com.siemens.logo.udwp.editor.component.PageComponent" id="main" name="Page">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="Page"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="main"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="0"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="1440@-@900"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="3000@-@3000"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="50@-@50"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="0@-@0"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="BasicProperty$PageBackgroundImage" id="PROPERTY_PAGE_BG_IMAGE" value="@-@@-@@-@null"/>
+        </Component>
+        <Component class="com.siemens.logo.udwp.editor.component.customize.BasicCustomizeComponent" id="4c85bcbc8c8d43e2d7ab" name="Login">
+            <ComponentProperty class="NameProperty" id="PROPERTY_Name" value="Login"/>
+            <ComponentProperty class="BasicProperty$IDProperty" id="PROPERTY_Component_Id" value="4c85bcbc8c8d43e2d7ab"/>
+            <ComponentProperty class="BasicProperty$ZIndex" id="PROPERTY_ZIndex" value="1"/>
+            <ComponentProperty class="BoundsProperty$Location" id="PROPERTY_Location" value="245@-@362"/>
+            <ComponentProperty class="BoundsProperty$Size" id="PROPERTY_Size" value="410@-@220"/>
+            <ComponentProperty class="BasicProperty$Degree" id="PROPERTY_Degree" value="0"/>
+            <ComponentProperty class="BoundsProperty$MaxSize" id="PROPERTY_MAX_SIZE" value="1390@-@850"/>
+            <ComponentProperty class="BoundsProperty$MinSize" id="PROPERTY_MIN_SIZE" value="220@-@220"/>
+            <ComponentProperty class="BoundsProperty$MaxPosition" id="PROPERTY_MAX_POSITION" value="1450@-@910"/>
+            <ComponentProperty class="BoundsProperty$MinPosition" id="PROPERTY_MIN_POSITION" value="0@-@0"/>
+            <ComponentProperty class="TextStyleProperty$FontStyle" id="PROPERTY_Font" value="Arial@-@0@-@16"/>
+            <ComponentProperty class="TextStyleProperty$TextColor" id="PROPERTY_TextColor" value="0@-@0@-@0"/>
+            <ComponentProperty class="BorderProperty$BorderWidth" id="PROPERTY_BorderWidth" value="1"/>
+            <ComponentProperty class="BorderProperty$Style" id="PROPERTY_BorderStyle" value="Solid"/>
+            <ComponentProperty class="BorderProperty$BorderColor" id="PROPERTY_BorderColor" value="0@-@0@-@0"/>
+            <ComponentProperty class="BorderProperty$Transparency" id="PROPERTY_Transparency" value="25"/>
+            <ComponentProperty class="BasicColorProperty$BackgroundColorProperty" id="PROPERTY_backgroundColor" value="204@-@204@-@204"/>
+            <ComponentProperty class="BorderProperty$NoFill" id="PROPERTY_NoFill" value="true"/>
+            <ComponentProperty class="LoginProperty$ToCustomizedSite" id="PROPERTY_LOGIN_TO_CUSTOMIZED_SITE" value="1"/>
+            <ComponentProperty class="LoginProperty$KeepLoggedOn" id="PROPERTY_KEEP_LOGGED_ON" value="0"/>
+        </Component>
+    </Components>
+</Page>

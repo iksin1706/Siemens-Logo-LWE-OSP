@@ -1,0 +1,211 @@
+<HTML xmlns="http://www.w3.org/1999/xhtml">
+
+<HEAD>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="" />
+    <meta name="author" content="Matthias Edler-Golla, wachenfeld-golla.de" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta http-equiv="pragram" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="0" />
+
+    <style type="text/css">
+        body {
+            background: #101010;
+            background-size: 100%;
+
+            -moz-user-select: none;
+            /*ff*/
+            -webkit-user-select: none;
+            /*webkit*/
+            -ms-user-select: none;
+            /*IE10*/
+            -khtml-user-select: none;
+            /*old*/
+            user-select: none;
+            margin: 0;
+        }
+
+        #wrap {}
+
+        #main {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            background-image: radial-gradient(circle at 50% 50%, #303030,#101010);
+        }
+
+        #login {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        #button_login {
+            width: 110px;
+            height: 40px;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 16px;
+            background-color: #DA2727;
+            border: none;
+            border-radius: 20px;
+            margin-top: 10px;
+            box-shadow: 0px 5px 5px #161616;   
+        }
+
+        .w-100 {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .logo-image {
+            height: 200px;
+        }
+
+        .flex-center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        #input_password {
+            height: 40px;
+            font-size: 16px;
+            background-color: #101010;
+            color: white;
+            border: none;
+            border: 2px solid #303030;
+            border-radius: 20px;
+            padding-left: 20px;
+            box-shadow: inset 2px 3px 5px #000000, 0px 1px 1px #333;
+        }
+
+        #input_password:focus-visible {
+            border: none;
+            inset: none;
+            outline: none;
+            transition: .3s;
+            border: 2px solid #DA2727;
+        }
+
+        .loginText {
+            font-size: 24px;
+            color: white;
+            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .logo-image{
+            filter: drop-shadow(5px 5px 5px #101010);
+        }
+    </style>
+    <link href="js/jqueryui/jqueryui.css" rel="stylesheet" type="text/css" />
+    <!-- this script helps older IE versions to understand html5 -->
+    <!--[if lt IE 9 ]>
+            <script src="js/html5.js"></script>
+        <![endif]-->
+    <script type="text/javascript" src="/js/utility.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/storage.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/bigint.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/encrypt.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/ajax.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/login.js?rdm=169687870"></script>
+    <script type="text/javascript" src="/js/pagecommon.js?rdm=169687870"></script>
+    <script type="text/javascript" src="js/jquery.js?rdm=169687870"></script>
+    <script type="text/javascript" src="js/jqueryui/jqueryui.js?rdm=169687870"></script>
+    <script type="text/javascript" src="js/map.js?rdm=169687870"></script>
+    <script type="text/javascript" src="js/render.js?rdm=169687870"></script>
+    <script src="js/login.js?rdm=1696878701686" type="text/javascript" id="js/login.js"></script>
+
+    <script type="text/javascript" language="javascript">
+        $(document).ready(function () {
+            if ($("#wrap")) {
+                /**only works in runtime*/
+                _initLoginPage();
+            }
+        });
+    </script>
+</HEAD>
+
+<BODY class="login" logo_public_key1="0" logo_public_key2="0" page_tag="login">
+    <!-- <div style="position: fixed;top: 0;left: 0;width: 100%;height: 100%;z-index: 1000; background-color:gray;opacity: 0.98;" id="loadingDiv">
+            <p style="position: relative;text-align: center;color:white;top: 45%;" class="blink">LOADING...</p>
+        </div> -->
+    <DIV id="wrap" n="login">
+        <div id="main" prefix="Siemens">
+            <div class="flex-center" comp_type="cus_loginCmp" id="4c85bcbc8c8d43e2d7ab" degree="0">
+                <img class="logo-image" src="img/logo.png" alt="">
+                <form id="login">
+                    <div style="display: none; font-style: normal; font-variant-caps: normal; font-stretch: normal; font-size: 16px; line-height: 1.5; font-family: Arial; color: rgb(0, 0, 0);"
+                        class="loginText"> Language </div>
+                    <div style="display:none"> <select id="select_language" onchange="OnLanguageChange(this);">
+                            <option value="1">English</option>
+                            <option value="0">Deutsch</option>
+                            <option value="2">Fran?ais</option>
+                            <option value="4">Italiano</option>
+                            <option value="3">Espa?ol</option>
+                            <option value="5">中文</option>
+                            <option value="9">日本語</option>
+                        </select> </div>
+                    <div class="loginInput" style=" display: none ;float: left;width: 70%;"> <select id="input_username"
+                            style="width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 100%;font-family: inherit;padding-left: 2px;padding-top: 3px;padding-bottom: 3px;border: 1px solid #879baa;border-radius: 0 !important;background: #fff;">
+                            <option value="Web User" selected="">Web User</option>
+                            <option value="Web Guest">Web Guest</option>
+                        </select>
+                        <!--                    <input id="input_username" type="text" placeholder="Login Name" value="Web User" disabled="true" readonly="true" style="width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;font-size: 100%;font-family: inherit;padding-left: 2px;padding-top: 3px;padding-bottom: 3px;border: 1px solid #879baa;border-radius: 0 !important;background: #fff;">                    -->
+                    </div>
+
+                    <div class="loginText">
+                        <div class="loginInputDiv">
+                            <div class="loginInput"> <input id="input_password" type="password" placeholder="Hasło"
+                                    maxlength="10" onfocus="OnPasswordFocus(this);">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="loginText" style="display: none">
+                        <div> <input id="check_logoncustomized" name="logonCustomizedWeb" type="checkbox"
+                                style="display: none" checked="checked">
+                            <label for="check_logoncustomized" onselectstart="return false;" style="display: none">
+                                To customized site</label>
+                        </div>
+                        <div id="keepMeLoggedOn"> <input id="check_keepsignin" name="staySignedIn" type="checkbox"
+                                style="display: none" checked="checked">
+                            <label for="check_keepsignin" onselectstart="return false;" style="display: none"> Keep
+                                me logged on </label>
+                        </div>
+                    </div>
+                    <div class="w-100">
+
+
+                        <button id="button_login" onclick="return LoginPageLogin();"
+                            failed_by_password="Invalid password" webserver_disabled="Web server is disabled.">
+                            Zaloguj </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </DIV>
+    <div id='timeout_dlg' style='display: none'>Please check the network connection!</div>
+</BODY>
+
+</HTML>

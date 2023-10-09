@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<CustomizeFiles/>
+<CustomizeFiles>
+    <CustomizeComponent xmlFileName="C:\Program Files\lwe\lwe\buildInCustomizeComponents\login\comp.xml" count="1">
+        <ComponentIDs>
+            <ComponentID>4c85bcbc8c8d43e2d7ab</ComponentID>
+        </ComponentIDs>
+        <Files>
+            <File>js\login.js</File>
+        </Files>
+    </CustomizeComponent>
+</CustomizeFiles>

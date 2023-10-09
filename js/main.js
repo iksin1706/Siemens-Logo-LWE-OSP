@@ -12,5 +12,5 @@ menuItem.click(function () {
 });
 
 window.onload = () => {
-    $(".wrap").width("100vw")
+    $(".wrapp").width("100vw")
 }

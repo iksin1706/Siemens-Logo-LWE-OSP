@@ -2,6 +2,10 @@
 <tProjectObj>
     <name>lwe4</name>
     <pages>
+        <pageName>login</pageName>
+        <pageTitle>Login Page</pageTitle>
+    </pages>
+    <pages>
         <pageName>main</pageName>
         <pageTitle>Home Page</pageTitle>
     </pages>

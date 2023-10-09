@@ -63,7 +63,7 @@
         }
 
         body {
-            background-color: #303030;
+            background-color: #202020;
             background-size: 100%;
             -moz-user-select: none;
             -webkit-user-select: none;
@@ -71,10 +71,11 @@
             -khtml-user-select: none;
             user-select: none;
             color: white;
-            font-family: "Trebuchet MS";
+            font-family: "Arial";
+
         }
 
-        #wrap {
+        #wrapp {
             margin: auto;
             min-height: 100vh;
             width: 100vw !important;
@@ -90,7 +91,8 @@
             justify-content: center;
             margin-top: 150px;
             padding: 20px;
-            background-color: #303030;
+            background-color: #202020;
+            max-width: 500px;
 
         }
 
@@ -162,6 +164,7 @@
             justify-content: center;
             align-items: center;
             width: 100vw;
+            box-shadow: 0px 5px 5px #101010aa;
         }
 
         .top-logo img {
@@ -170,7 +173,8 @@
 
         .bottom-menu {
             position: fixed;
-            left: 0;
+            left: 50%;
+            transform: translateX(-50%);
             background: #121212;
             height: 80px;
             width: 100vw;
@@ -179,6 +183,7 @@
             justify-content: space-around;
             align-items: center;
             border-radius: 20px 20px 0px 0px;
+            max-width: 500px;
         }
 
         .bottom-menu__item {
@@ -189,10 +194,14 @@
             justify-content: space-around;
         }
 
+        .bottom-menu__item:hover{
+            cursor: pointer;
+        }
+
         .bottom-menu__item__image {
             width: 30px;
             transition: .3s ease-in-out;
-            border: 0px solid #303030;
+            border: 0px solid #202020;
             border-radius: 50%;
         }
 
@@ -209,7 +218,7 @@
             border-radius: 50%;
             margin-top: -100px;
             background-color: #DA2727;
-            border: 10px solid #303030;
+            border: 10px solid #202020;
             padding: 25px;
 
         }
@@ -249,28 +258,38 @@
             width: 150px;
             background-repeat: no-repeat;
         }
+        
+        .switch:hover{
+            cursor: pointer;
+        }
+
+
 
         .background--light {
             background: url("img/light2.png") #101010;
+            background-size: 100px 100px;
         }
 
         .background--gate {
             background: url("img/gate2.png") #101010;
+            background-size: 80px 80px;
         }
 
         .background--lightOUT {
             background: url("img/lightOUT.png") #101010;
+            background-size: 80px 80px;
         }
 
         .background--garage {
             background: url("img/garage.png") #101010;
+            background-size: 80px 80px;
         }
-
         .background--icon {
-            background-position: -30px 50%;
-            background-size: 100px 100px;
+            background-position: -25px 50%;
             background-repeat: no-repeat;
         }
+
+
 
         .w-50 {
             height: 120px;
@@ -284,12 +303,26 @@
             font-size: 18px;
         }
 
+        .clock {
+            color: white;
+            width: 100%;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+        .space-between{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+
     </style>
 
 </HEAD>
 
 <BODY onload="loadPage()">
-    <DIV id="wrap" style="width: 100vw !important;">
+    <DIV id="wrapp" style="width: 100vw !important;">
         <div class="top-logo">
             <img src="img/logo.png" alt="">
         </div>
@@ -454,7 +487,7 @@
                         show_function="_callback_showDateTime" range="132" address="7920" type="2" length="6"
                         show_param="47a4b0b622f76d0ee033" block_format="Unsigned"
                         id="47a4b0b622f76d0ee033" degree="0" device_name="" text_align="left" time_format="ft">
-                        <div style="position:relative;top:20%">
+                        <div class="space-between">
                             <div class="dayTime">ddd.HH:mm:ss</div>
                             <div class="date">yyyy-MM-dd</div>
                         </div>
