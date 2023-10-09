@@ -14,7 +14,7 @@ var LOCAL_STORAGE_PREFIX = "logo";
 /** init page after document tree loaded */
 $(document).ready(function () {
     renderJs.resetDivImgFromAttr();
-    renderJs.initNavivator();
+    //renderJs.initNavivator();
     if (isFirstTimeInit) {
         renderJs.initVM();
         isFirstTimeInit = false;
@@ -294,7 +294,6 @@ var renderJs = (function () {
     function initNavBounds() {
         $("#tag").css("top", $("#main").height() / 2 - 55);
         $("#menu").css("height", $("#main").css("height"));
-        $("#wrap").css('width', $("#main").css("width"));
         renderJs.initNavLeftRightStyle();
         navButtonReposition();
     }
@@ -1458,7 +1457,7 @@ var renderJs = (function () {
         }
 
         $("#" + id).attr("click_progress", "inProgress");
-        renderJs.showLoading(id);
+        //renderJs.showLoading(id);
         var oRequest = new DBRequest(document.getElementById(id));
         oRequest.SetValue("01");
         if (oRequest.SetQuery()) {
@@ -1523,7 +1522,7 @@ var renderJs = (function () {
             var current = Date.parse(new Date());
             var executeTime = current - pushDownTime;
             if (executeTime < pushButtonDelayTime) {
-                renderJs.showLoading(id);
+                //renderJs.showLoading(id);
                 $("#" + id).attr("in_delay", "on");
                 setTimeout(function () {
                     renderJs.doPushButtonUp(id);

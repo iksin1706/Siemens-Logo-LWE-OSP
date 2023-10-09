@@ -254,8 +254,16 @@
             background: url("img/light2.png") #101010;
         }
 
+        .background--gate {
+            background: url("img/gate2.png") #101010;
+        }
+
         .background--lightOUT {
             background: url("img/lightOUT.png") #101010;
+        }
+
+        .background--garage {
+            background: url("img/garage.png") #101010;
         }
 
         .background--icon {
@@ -275,6 +283,7 @@
         .siren__text {
             font-size: 18px;
         }
+
     </style>
 
 </HEAD>
@@ -309,28 +318,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="box">
-                    <p>Ładowanie akumulatorów</p>
-                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter" range="131" address="4" type="1" length="1" on_text="ON"
-                        off_text="OFF" id="457baff52e9f7b587b48" show_param="457baff52e9f7b587b48" degree="0"
-                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
-                        <p class="lamp__text">
-                            OFF
-                        </p>
-                    </div>
-                </div>
-                <div class="box">
-                    <p>Dobijanie kompresora</p>
-                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter" range="131" address="5" type="1" length="1" on_text="ON"
-                        off_text="OFF" id="4057a171fcfe7df7654f" show_param="4057a171fcfe7df7654f" degree="0"
-                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
-                        <p class="lamp__text">
-                            OFF
-                        </p>
-                    </div>
-                </div>
+
                 <!-- <div class="button">
                     <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
                         class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
@@ -355,35 +343,59 @@
                 </div> -->
             </div>
             <div class="gate-wrapper wrapper">
-                <div class="box box--big background--icon background--light">
-                    <p class="box__text">Brama wewnetrzna</p>
+                <div class="box box--big background--icon background--gate">
+                    <p class="box__text">Brama zewnetrzna</p>
                     <div class="toggle">
                         <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                            class="server_binding textCenter switch"
-                            range="130" address="6" type="1" length="1"
+                            class="server_binding textCenter switch" range="130" address="6" type="1" length="1"
                             id="452eb9c16552b94e487b" show_param="452eb9c16552b94e487b" degree="0" tag_id="Private Tag"
-                            device_name="" on_image="img/ON.png" off_image="img/OFF.png"
-                            bg_image="img/Default.png" mode="false" text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;"></p>
+                            device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/open.png"
+                            mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
                         </div>
                         <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                            class="server_binding textCenter button__button switch"
-                            range="131" address="0" type="1" length="1" on_text="ON" off_text="OFF" frequency="1000"
-                            mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            class="server_binding textCenter button__button switch" range="131" address="0" type="1"
+                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
                             onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
                             onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
                             onclick="renderJs.onPushButtonClicked(this)" id="4996a1d7ea9cf157c714"
                             show_param="4996a1d7ea9cf157c714" degree="0" tag_id="Private Tag" device_name=""
-                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
-                            text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;">OFF</p>
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
                         </div>
                     </div>
-
+                </div>
+                <div class="box box--big background--icon background--garage">
+                    <p class="box__text">Brama wewnetrzna</p>
+                    <div class="toggle">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding textCenter switch" range="130" address="7" type="1" length="1"
+                            id="4c6e9f29857350e34a41" show_param="4c6e9f29857350e34a41" degree="0" tag_id="Private Tag"
+                            device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/closed.png"
+                            mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding textCenter switch button__button" range="131" address="1" type="1"
+                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4b43bd97dfa612fdac81"
+                            show_param="4b43bd97dfa612fdac81" degree="0" tag_id="Private Tag" device_name=""
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="light-wrapper wrapper">
-                <div class="box box--big background--icon background--light">
+                <div class="box box--big background--icon background--lightOUT">
 
                     <p class="box__text">Oswietlenie wewnetrzne</p>
 
@@ -436,7 +448,41 @@
                     </div>
                 </div>
             </div>
-            <div class="time-wrapper wrapper">CZAS</div>
+            <div class="time-wrapper wrapper">
+                <div class="box">
+                    <div comp_type="analogDateTimeComponent" class="server_binding clock"
+                        show_function="_callback_showDateTime" range="132" address="7920" type="2" length="6"
+                        show_param="47a4b0b622f76d0ee033" block_format="Unsigned"
+                        id="47a4b0b622f76d0ee033" degree="0" device_name="" text_align="left" time_format="ft">
+                        <div style="position:relative;top:20%">
+                            <div class="dayTime">ddd.HH:mm:ss</div>
+                            <div class="date">yyyy-MM-dd</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box">
+                    <p>Ładowanie akumulatorów</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter" range="131" address="4" type="1" length="1" on_text="ON"
+                        off_text="OFF" id="457baff52e9f7b587b48" show_param="457baff52e9f7b587b48" degree="0"
+                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                        <p class="lamp__text">
+                            OFF
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <p>Dobijanie kompresora</p>
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter" range="131" address="5" type="1" length="1" on_text="ON"
+                        off_text="OFF" id="4057a171fcfe7df7654f" show_param="4057a171fcfe7df7654f" degree="0"
+                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                        <p class="lamp__text">
+                            OFF
+                        </p>
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="bottom-menu">
             <div class="bottom-menu__item active" option="home">
