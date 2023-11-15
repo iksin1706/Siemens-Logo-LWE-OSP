@@ -89,7 +89,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-top: 150px;
+            margin-top: 100px;
             padding: 20px;
             background-color: #202020;
             max-width: 500px;
@@ -122,8 +122,8 @@
             position: absolute;
             left: 0;
             top: 0;
-            background-image: url("img/9A52DE0E.png");
-            background-size: cover;
+            background-size: 50%;
+            background-position: center center;
             background-repeat: no-repeat;
             width: 100%;
             height: 100%;
@@ -146,12 +146,10 @@
         }
 
         .alarm {
-            height: 50px;
-            width: 50px;
+            height: 125px;
+            width: 125px;
             background-size: cover;
         }
-
-
 
         .top-logo {
             position: fixed;
@@ -194,7 +192,7 @@
             justify-content: space-around;
         }
 
-        .bottom-menu__item:hover{
+        .bottom-menu__item:hover {
             cursor: pointer;
         }
 
@@ -216,7 +214,7 @@
 
         .active>.bottom-menu__item__image {
             border-radius: 50%;
-            margin-top: -100px;
+            margin-top: -80px;
             background-color: #DA2727;
             border: 10px solid #202020;
             padding: 25px;
@@ -224,13 +222,14 @@
         }
 
         .active>.bottom-menu__item__text {
-            margin-top: 40px;
+            margin-top: 8px;
             color: #DA2727;
         }
 
         .wrapper {
             display: none;
-
+            overflow-y: auto;
+            max-height: 70vh;
         }
 
         .selected {
@@ -246,7 +245,7 @@
         }
 
         .box__text {
-            width: 100px;
+            width: 130px;
             margin-left: 65px;
             font-size: 20px;
         }
@@ -258,8 +257,8 @@
             width: 150px;
             background-repeat: no-repeat;
         }
-        
-        .switch:hover{
+
+        .switch:hover {
             cursor: pointer;
         }
 
@@ -284,6 +283,7 @@
             background: url("img/garage.png") #101010;
             background-size: 80px 80px;
         }
+
         .background--icon {
             background-position: -25px 50%;
             background-repeat: no-repeat;
@@ -292,11 +292,12 @@
 
 
         .w-50 {
-            height: 120px;
+            height: 175px;
             display: flex;
             flex-wrap: wrap-reverse;
             justify-content: center;
             flex: 1;
+            width: 50%;
         }
 
         .siren__text {
@@ -309,61 +310,153 @@
             padding-left: 5px;
             padding-right: 5px;
         }
-        .space-between{
+
+        .space-between {
             width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
         }
-        
-
+        .row {
+            width: 100%;
+            display: flex;
+            gap: 10px;
+        }
     </style>
 
 </HEAD>
 
 <BODY onload="loadPage()">
-    <DIV id="wrapp" style="width: 100vw !important;">
+    <DIV id="wrap" style="width: 100vw !important;">
         <div class="top-logo">
-            <img src="img/logo.png" alt="">
+            <img src="img/osp-logo.png" alt="">
         </div>
         <div id="main" onclick="renderJs.hideMenu()" prefix="Siemens">
             <div class="home-wrapper wrapper selected">
-
-                <div class="box w-50">
-                    <p class="siren__text">Alarm Syrena</p>
-                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter alarm" range="129" address="0" type="1" length="1" on_text=""
-                        off_text="" id="4b1b94c4e737c7c557cd" show_param="4b1b94c4e737c7c557cd" degree="0"
-                        tag_id="Private Tag" device_name="" on_image="img/alarmON.png" off_image="img/alarmOFF.png"
-                        bg_image="img/alarmOFF.png" mode="false" text_align="center">
+                <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                    class="server_binding textCenter alarm" range="129" address="0" type="1" length="1" on_text=""
+                    off_text="" id="4b1b94c4e737c7c557cd" show_param="4b1b94c4e737c7c557cd" degree="0"
+                    tag_id="Private Tag" device_name="" on_image="img/alarmON.png" off_image="img/alarmOFF.png"
+                    bg_image="img/alarmOFF.png" mode="false" text_align="center">
+                </div>
+                <div class="row" style="margin-top: 50px">
+                    <div class="button box w-50">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
+                            off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
+                            tag_id="Private Tag" device_name="" on_image="img/lightOn.png" off_image="img/lightOff.png"
+                            bg_image="img/lightOff.png" mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding  button__button" range="131" address="3" type="1" length="1"
+                            frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a"
+                            show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                        </div>
+                    </div>
+                    <div class="button box w-50">
+                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                            class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
+                            off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
+                            tag_id="Private Tag" device_name="" on_image="img/compOn.png" off_image="img/compOff.png"
+                            bg_image="img/9F6A1EA0.png" mode="false" text_align="center">
+                            <p
+                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                            </p>
+                        </div>
+                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                            class="server_binding  button__button" range="131" address="3" type="1" length="1"
+                            frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                            onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83b"
+                            show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
+                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
+                            mode="true" text_align="center">
+                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                        </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="box w-50">
-                    <p class="siren__text">Alarm E-Remiza</p>
-                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter alarm" range="129" address="1" type="1" length="1" on_text=""
-                        off_text="" id="456589157e4ff9a0b32d" show_param="456589157e4ff9a0b32d" degree="0"
-                        tag_id="Private Tag" device_name="" on_image="img/alarmON.png" off_image="img/alarmOFF.png"
-                        bg_image="img/alarmOFF.png" mode="false" text_align="center">
-                        <p
-                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                        </p>
-                    </div>
-                </div>
 
-                <!-- <div class="button">
+        </div>
+        <div class="gate-wrapper wrapper">
+            <div class="box box--big background--icon background--gate">
+                <p class="box__text">Brama zewnetrzna</p>
+                <div class="toggle">
                     <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding button__image" range="130" address="8" type="1" length="1" on_text=""
-                        off_text="" id="41069f88ec424876c821" show_param="41069f88ec424876c821" degree="0"
-                        tag_id="Private Tag" device_name="" on_image="img/F51DA93A.png" off_image="img/9F6A1EA0.png"
-                        bg_image="img/9F6A1EA0.png" mode="false" text_align="center">
+                        class="server_binding textCenter switch" range="130" address="6" type="1" length="1"
+                        id="452eb9c16552b94e487b" show_param="452eb9c16552b94e487b" degree="0" tag_id="Private Tag"
+                        device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/open.png"
+                        mode="false" text_align="center">
                         <p
                             style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
                         </p>
                     </div>
                     <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                        class="server_binding  button__button" range="131" address="3" type="1" length="1"
+                        class="server_binding textCenter button__button switch" range="131" address="0" type="1"
+                        length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                        onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                        onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                        onclick="renderJs.onPushButtonClicked(this)" id="4996a1d7ea9cf157c714"
+                        show_param="4996a1d7ea9cf157c714" degree="0" tag_id="Private Tag" device_name=""
+                        on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                        text_align="center">
+                        <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="box box--big background--icon background--garage">
+                <p class="box__text">Brama wewnetrzna</p>
+                <div class="toggle">
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter switch" range="130" address="7" type="1" length="1"
+                        id="4c6e9f29857350e34a41" show_param="4c6e9f29857350e34a41" degree="0" tag_id="Private Tag"
+                        device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/closed.png"
+                        mode="false" text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                        </p>
+                    </div>
+                    <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                        class="server_binding textCenter switch button__button" range="131" address="1" type="1"
+                        length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                        onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                        onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                        onclick="renderJs.onPushButtonClicked(this)" id="4b43bd97dfa612fdac81"
+                        show_param="4b43bd97dfa612fdac81" degree="0" tag_id="Private Tag" device_name=""
+                        on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                        text_align="center">
+                        <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="light-wrapper wrapper">
+            <div class="box box--big background--icon background--lightOUT">
+
+                <p class="box__text">Oswietlenie wewnetrzne</p>
+
+                <div class="toggle">
+                    <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                        class="server_binding textCenter switch" range="130" address="8" type="1" length="1"
+                        id="4409bccca5355d32111e" show_param="4409bccca5355d32111e" degree="0" tag_id="Private Tag"
+                        device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png" mode="false"
+                        text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
+                        </p>
+                    </div>
+                    <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                        class="server_binding  button__button switch" range="131" address="3" type="1" length="1"
                         frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
                         onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
                         onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
@@ -373,177 +466,124 @@
                         text_align="center">
                         <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
                     </div>
-                </div> -->
-            </div>
-            <div class="gate-wrapper wrapper">
-                <div class="box box--big background--icon background--gate">
-                    <p class="box__text">Brama zewnetrzna</p>
-                    <div class="toggle">
-                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                            class="server_binding textCenter switch" range="130" address="6" type="1" length="1"
-                            id="452eb9c16552b94e487b" show_param="452eb9c16552b94e487b" degree="0" tag_id="Private Tag"
-                            device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/open.png"
-                            mode="false" text_align="center">
-                            <p
-                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                            </p>
-                        </div>
-                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                            class="server_binding textCenter button__button switch" range="131" address="0" type="1"
-                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
-                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
-                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
-                            onclick="renderJs.onPushButtonClicked(this)" id="4996a1d7ea9cf157c714"
-                            show_param="4996a1d7ea9cf157c714" degree="0" tag_id="Private Tag" device_name=""
-                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
-                            mode="true" text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box box--big background--icon background--garage">
-                    <p class="box__text">Brama wewnetrzna</p>
-                    <div class="toggle">
-                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                            class="server_binding textCenter switch" range="130" address="7" type="1" length="1"
-                            id="4c6e9f29857350e34a41" show_param="4c6e9f29857350e34a41" degree="0" tag_id="Private Tag"
-                            device_name="" on_image="img/closed.png" off_image="img/open.png" bg_image="img/closed.png"
-                            mode="false" text_align="center">
-                            <p
-                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                            </p>
-                        </div>
-                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                            class="server_binding textCenter switch button__button" range="131" address="1" type="1"
-                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
-                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
-                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
-                            onclick="renderJs.onPushButtonClicked(this)" id="4b43bd97dfa612fdac81"
-                            show_param="4b43bd97dfa612fdac81" degree="0" tag_id="Private Tag" device_name=""
-                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
-                            mode="true" text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <div class="light-wrapper wrapper">
-                <div class="box box--big background--icon background--lightOUT">
+            <div class="box box--big background--icon background--lightOUT">
 
-                    <p class="box__text">Oswietlenie wewnetrzne</p>
+                <p class="box__text">Oswietlenie wewnetrzne 2</p>
 
-                    <div class="toggle">
-                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                            class="server_binding textCenter switch" range="130" address="8" type="1" length="1"
-                            id="4409bccca5355d32111e" show_param="4409bccca5355d32111e" degree="0" tag_id="Private Tag"
-                            device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png"
-                            mode="false" text_align="center">
-                            <p
-                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                            </p>
-                        </div>
-                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                            class="server_binding  button__button switch" range="131" address="3" type="1" length="1"
-                            frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
-                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
-                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
-                            onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a"
-                            show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
-                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
-                            mode="true" text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="box box--big background--icon background--light">
-                    <p class="box__text">Oswietlenie zewnetrzne</p>
-                    <div class="toggle">
-                        <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                            class="server_binding textCenter switch" range="130" address="5" type="1" length="1"
-                            id="4b748f0ca91af70b433c" show_param="4b748f0ca91af70b433c" degree="0" tag_id="Private Tag"
-                            device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png"
-                            mode="false" text_align="center">
-                            <p
-                                style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
-                            </p>
-                        </div>
-                        <div comp_type="PushButton" show_function="_callback_loadPushButton"
-                            class="server_binding textCenter button__button switch" range="131" address="2" type="1"
-                            length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
-                            onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
-                            onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
-                            onclick="renderJs.onPushButtonClicked(this)" id="4504b95c05a23fdd0c91"
-                            show_param="4504b95c05a23fdd0c91" degree="0" tag_id="Private Tag" device_name=""
-                            on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png"
-                            mode="true" text_align="center">
-                            <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="time-wrapper wrapper">
-                <div class="box">
-                    <div comp_type="analogDateTimeComponent" class="server_binding clock"
-                        show_function="_callback_showDateTime" range="132" address="7920" type="2" length="6"
-                        show_param="47a4b0b622f76d0ee033" block_format="Unsigned"
-                        id="47a4b0b622f76d0ee033" degree="0" device_name="" text_align="left" time_format="ft">
-                        <div class="space-between">
-                            <div class="dayTime">ddd.HH:mm:ss</div>
-                            <div class="date">yyyy-MM-dd</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="box">
-                    <p>Ładowanie akumulatorów</p>
+                <div class="toggle">
                     <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter" range="131" address="4" type="1" length="1" on_text="ON"
-                        off_text="OFF" id="457baff52e9f7b587b48" show_param="457baff52e9f7b587b48" degree="0"
-                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
-                        <p class="lamp__text">
-                            OFF
+                        class="server_binding textCenter switch" range="130" address="8" type="1" length="1"
+                        id="4409bccca5355d32111e" show_param="4409bccca5355d32111e" degree="0" tag_id="Private Tag"
+                        device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png" mode="false"
+                        text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
                         </p>
                     </div>
+                    <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                        class="server_binding  button__button switch" range="131" address="3" type="1" length="1"
+                        frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                        onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                        onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                        onclick="renderJs.onPushButtonClicked(this)" id="4f37a59bb3525bc9e83a"
+                        show_param="4f37a59bb3525bc9e83a" degree="0" tag_id="Private Tag" device_name=""
+                        on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                        text_align="center">
+                        <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
+                    </div>
                 </div>
-                <div class="box">
-                    <p>Dobijanie kompresora</p>
+            </div>
+            <div class="box box--big background--icon background--light">
+                <p class="box__text">Oswietlenie zewnetrzne</p>
+                <div class="toggle">
                     <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
-                        class="server_binding textCenter" range="131" address="5" type="1" length="1" on_text="ON"
-                        off_text="OFF" id="4057a171fcfe7df7654f" show_param="4057a171fcfe7df7654f" degree="0"
-                        tag_id="Private Tag" device_name="" mode="false" text_align="center">
-                        <p class="lamp__text">
-                            OFF
+                        class="server_binding textCenter switch" range="130" address="5" type="1" length="1"
+                        id="4b748f0ca91af70b433c" show_param="4b748f0ca91af70b433c" degree="0" tag_id="Private Tag"
+                        device_name="" on_image="img/ON.png" off_image="img/OFF.png" bg_image="img/OFF.png" mode="false"
+                        text_align="center">
+                        <p
+                            style="width: 84px; height: 84px; display: table-cell; vertical-align: middle; text-align: center;">
                         </p>
+                    </div>
+                    <div comp_type="PushButton" show_function="_callback_loadPushButton"
+                        class="server_binding textCenter button__button switch" range="131" address="2" type="1"
+                        length="1" frequency="1000" mouse_mode="Click" ontouchstart="renderJs.FuncTouchDown(this)"
+                        onmousedown="renderJs.FuncMouseDown(this)" onmouseout="renderJs.FuncMouseUp(this)"
+                        onmouseup="renderJs.FuncMouseUp(this)" ontouchend="renderJs.FuncTouchUp(this)"
+                        onclick="renderJs.onPushButtonClicked(this)" id="4504b95c05a23fdd0c91"
+                        show_param="4504b95c05a23fdd0c91" degree="0" tag_id="Private Tag" device_name=""
+                        on_image="img/9A52DE0E.png" off_image="img/9A52DE0E.png" bg_image="img/9A52DE0E.png" mode="true"
+                        text_align="center">
+                        <p style="width: 84px; height: 84px; display: table-cell; vertical-align: middle;"></p>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="bottom-menu">
-            <div class="bottom-menu__item active" option="home">
-                <div class="bottom-menu__item__image">
-                    <img src="img/home.png" alt="">
+        <div class="time-wrapper wrapper">
+            <div class="box">
+                <div comp_type="analogDateTimeComponent" class="server_binding clock"
+                    show_function="_callback_showDateTime" range="132" address="7920" type="2" length="6"
+                    show_param="47a4b0b622f76d0ee033" block_format="Unsigned" id="47a4b0b622f76d0ee033" degree="0"
+                    device_name="" text_align="left" time_format="ft">
+                    <div class="space-between">
+                        <div class="dayTime">ddd.HH:mm:ss</div>
+                        <div class="date">yyyy-MM-dd</div>
+                    </div>
                 </div>
-                <p class="bottom-menu__item__text">Home</p>
             </div>
-            <div class="bottom-menu__item" option="light">
-                <div class="bottom-menu__item__image">
-                    <img src="img/light.png" alt="">
+            <div class="box">
+                <p>Ładowanie akumulatorów</p>
+                <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                    class="server_binding textCenter" range="131" address="4" type="1" length="1" on_text="ON"
+                    off_text="OFF" id="457baff52e9f7b587b48" show_param="457baff52e9f7b587b48" degree="0"
+                    tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                    <p class="lamp__text">
+                        OFF
+                    </p>
                 </div>
-                <p class="bottom-menu__item__text">Oświetlenie</p>
             </div>
-            <div class="bottom-menu__item" option="gate">
-                <div class="bottom-menu__item__image">
-                    <img src="img/gate.png" alt="">
+            <div class="box">
+                <p>Dobijanie kompresora</p>
+                <div comp_type="CustomizedComponent" show_function="_callback_loadCustomizedComponent"
+                    class="server_binding textCenter" range="131" address="5" type="1" length="1" on_text="ON"
+                    off_text="OFF" id="4057a171fcfe7df7654f" show_param="4057a171fcfe7df7654f" degree="0"
+                    tag_id="Private Tag" device_name="" mode="false" text_align="center">
+                    <p class="lamp__text">
+                        OFF
+                    </p>
                 </div>
-                <p class="bottom-menu__item__text">Bramy</p>
-            </div>
-
-            <div class="bottom-menu__item" option="time">
-                <div class="bottom-menu__item__image">
-                    <img src="img/time.png" alt="">
-                </div>
-                <p class="bottom-menu__item__text">Wł.czasowe</p>
             </div>
         </div>
+    </div>
+    <div class="bottom-menu">
+        <div class="bottom-menu__item active" option="home">
+            <div class="bottom-menu__item__image">
+                <img src="img/home.png" alt="">
+            </div>
+            <p class="bottom-menu__item__text">Home</p>
+        </div>
+        <div class="bottom-menu__item" option="light">
+            <div class="bottom-menu__item__image">
+                <img src="img/light.png" alt="">
+            </div>
+            <p class="bottom-menu__item__text">Oświetlenie</p>
+        </div>
+        <div class="bottom-menu__item" option="gate">
+            <div class="bottom-menu__item__image">
+                <img src="img/gate.png" alt="">
+            </div>
+            <p class="bottom-menu__item__text">Bramy</p>
+        </div>
+
+        <div class="bottom-menu__item" option="time">
+            <div class="bottom-menu__item__image">
+                <img src="img/time.png" alt="">
+            </div>
+            <p class="bottom-menu__item__text">Wł.czasowe</p>
+        </div>
+    </div>
     </DIV>
     <div id='timeout_dlg' style='display: none'>Please check the network connection!</div>
 </BODY>
